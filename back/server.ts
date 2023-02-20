@@ -5,6 +5,7 @@ import { roomManager } from "./src/RoomManager";
 import { RoomManagerService } from "./src/Messages/generated/services_grpc_pb";
 import { HTTP_PORT, GRPC_PORT, ENABLE_TELEMETRY } from "./src/Enum/EnvironmentVariable";
 import { telemetryService } from "./src/Services/TelemetryService";
+import "@total-typescript/ts-reset";
 
 if (ENABLE_TELEMETRY) {
     telemetryService.startTelemetry().catch((e) => console.error(e));
